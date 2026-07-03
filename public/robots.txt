@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /
-Disallow: /secret
+Disallow: /
 
 Sitemap: https://theabhiramr.com/sitemap.xml
