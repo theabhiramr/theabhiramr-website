@@ -12,7 +12,9 @@ This is my personal portfolio website. I decided to improve on my website to bet
 - Cloudflare
 
 ## Version History
-
+- ### v2.1.1
+  - added SEO
+  - created robots.txt
 - ### v2.1.0
   - Refactored Timeline component for improved structure and readability
   - Implemented layout routing for LandingPage
