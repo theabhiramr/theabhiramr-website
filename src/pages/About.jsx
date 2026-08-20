@@ -1,24 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypewriter";
-import { Timeline, TechBadge } from "../components";
+import { Timeline, TechBadge, TechTile } from "../components";
 import { profilePng } from "../assets";
 import { education } from "../constants/data";
 import { fadeUp, stagger, inViewOptions } from "../utils/animations";
-
-const programmingLanguages = [
-  "Python", "C", "C++", "Java", "C#", "Makefile",
-  "JavaScript", "TypeScript", "Markdown", "Assembly", "R", "Dockerfile",
-];
-
-const toolsFrameworks = [
-  "VS Code", "IntelliJ", "PyCharm", "Git", "Node.js", "Expo", "AWS", "Firebase", "Claude Code", "MCP",
-  "PyTorch", "Jupyter", "Docker", "Databricks"
-];
+import { skills as techSkills } from "../constants/data";
 
 const skills = [
-  "Full Stack Development", "Embedded Systems", "Cloud Computing",
-  "DevOps", "Agile", "Kanban", "Agentic AI"
+  "Full Stack Development",
+  "Embedded Systems",
+  "Cloud Computing",
+  "DevOps",
+  "CI/CD",
+  "Infrastructure as Code (IaC)",
+  "Agile",
+  "Kanban",
+  "Agentic AI",
 ];
 
 function ScrollReveal({ children, className }) {
@@ -42,7 +40,8 @@ function ScrollReveal({ children, className }) {
 export default function About() {
   const [skipped, setSkipped] = useState(false);
   const shouldReduceMotion = useReducedMotion();
-  const bioText = "I want to use my skills to build impactful, scalable technologies.";
+  const bioText =
+    "I want to use my skills to build impactful, scalable technologies.";
   const { displayText, isTyping } = useTypewriter(bioText, 40, 500);
   const finalText = skipped ? bioText : displayText;
 
@@ -51,12 +50,16 @@ export default function About() {
   const eduRef = useRef(null);
   const langRef = useRef(null);
   const toolsRef = useRef(null);
+  const cloudRef = useRef(null);
+  const frameworksRef = useRef(null);
   const skillsRef = useRef(null);
 
   const bioInView = useInView(bioRef, inViewOptions);
   const eduInView = useInView(eduRef, inViewOptions);
   const langInView = useInView(langRef, inViewOptions);
   const toolsInView = useInView(toolsRef, inViewOptions);
+  const cloudInView = useInView(cloudRef, inViewOptions);
+  const frameworksInView = useInView(frameworksRef, inViewOptions);
   const skillsInView = useInView(skillsRef, inViewOptions);
 
   useEffect(() => {
@@ -66,7 +69,11 @@ export default function About() {
   const motionProps = (inView) =>
     shouldReduceMotion
       ? {}
-      : { variants: fadeUp, initial: "hidden", animate: inView ? "visible" : "hidden" };
+      : {
+          variants: fadeUp,
+          initial: "hidden",
+          animate: inView ? "visible" : "hidden",
+        };
 
   return (
     <div className="py-12">
@@ -79,7 +86,11 @@ export default function About() {
             animate="visible"
           >
             <div className="relative inline-block">
-              <a href="https://github.com/theabhiramr" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/theabhiramr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={profilePng}
                   alt="Abhi Ramachandran"
@@ -89,9 +100,9 @@ export default function About() {
               <div className="bg-accent border-background absolute -right-1 -bottom-1 h-5 w-5 rounded-full border-[3px] lg:h-6 lg:w-6 lg:border-4" />
             </div>
 
-            <h1 className="text-content mt-6 text-3xl leading-tight font-bold tracking-tighter lg:mt-8 lg:text-5xl">
+            <h1 className="text-content mt-6 text-4xl leading-tight font-bold tracking-tighter lg:mt-8 lg:text-5xl">
               Abhi <br />
-              <span className="text-muted/40"> Ramachandran</span>
+              <span className="text-muted"> Ramachandran</span>
             </h1>
           </motion.div>
 
@@ -114,13 +125,13 @@ export default function About() {
             variants={shouldReduceMotion ? {} : stagger}
             initial="hidden"
             animate={skillsInView ? "visible" : "hidden"}
-            className="flex flex-wrap gap-2 pt-2 lg:gap-4"
+            className="flex flex-wrap gap-2 pt-2"
           >
             {skills.map((tag) => (
               <motion.span
                 key={tag}
                 variants={shouldReduceMotion ? {} : fadeUp}
-                className="text-muted/50 border-border rounded-full border px-3 py-1 text-[9px] font-bold tracking-widest uppercase lg:text-[10px]"
+                className="font-geist-mono text-accent bg-accent/10 border-accent/20 w-fit self-start rounded-full border px-3 py-1 text-[10px] whitespace-nowrap uppercase sm:text-[11px]"
               >
                 {tag}
               </motion.span>
@@ -143,38 +154,66 @@ export default function About() {
               className="text-muted font-inter text-[15px] leading-relaxed lg:text-lg"
             >
               I am an Honors CS student at{" "}
-              <a href="https://drexel.edu/cs" rel="noopener noreferrer" target="_blank" className="text-muted hover:text-accent">
+              <a
+                href="https://drexel.edu/cs"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-muted hover:text-accent"
+              >
                 Drexel University
               </a>{" "}
-              doing concentrations in AI/ML and Computer Systems. I recently studied at{" "}
-              <a href="https://www.upf.edu/en/" rel="noopener noreferrer" target="_blank" className="text-muted hover:text-accent">
+              doing concentrations in AI/ML and Computer Systems. I recently
+              studied at{" "}
+              <a
+                href="https://www.upf.edu/en/"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-muted hover:text-accent"
+              >
                 Universitat Pompeu Fabra
               </a>{" "}
-              in Barcelona — an experience that reshaped how I view global software development.
+              in Barcelona — an experience that reshaped how I view global
+              software development.
             </motion.p>
             <motion.p
               variants={shouldReduceMotion ? {} : fadeUp}
               className="text-muted font-inter text-[15px] leading-relaxed lg:text-lg"
             >
-              I have worked on bridging the gap between LLMs and practical education and
-              building community-driven social platforms in my projects. I believe that if
-              there is a better way to do something, I can build it.
+              I have worked on bridging the gap between LLMs and practical
+              education and building community-driven social platforms in my
+              projects. I believe that if there is a better way to do something,
+              I can build it.
             </motion.p>
             <motion.p
               variants={shouldReduceMotion ? {} : fadeUp}
               className="text-muted font-inter text-[15px] leading-relaxed lg:text-lg"
             >
               From developing V2V charging systems at{" "}
-              <a href="https://evbuddy.net" rel="noopener noreferrer" target="_blank" className="text-muted hover:text-accent">
+              <a
+                href="https://evbuddy.net"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-muted hover:text-accent"
+              >
                 EV Buddy
               </a>{" "}
               to streamlining SDR production at{" "}
-              <a href="https://epiqsolutions.com" rel="noopener noreferrer" target="_blank" className="text-muted hover:text-accent">
+              <a
+                href="https://epiqsolutions.com"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-muted hover:text-accent"
+              >
                 Epiq Solutions
               </a>
-              , I thrive in high-stakes engineering environments. I hope to continue
-              challenging myself during my upcoming co-op at{" "}
-              <a href="https://www.bms.com" rel="noopener noreferrer" target="_blank" className="text-muted hover:text-accent">
+              , I thrive in high-stakes engineering environments. I hope to
+              continue challenging myself during my upcoming co-op at{" "}
+              <a
+                href="https://www.bms.com"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="text-muted hover:text-accent"
+              >
                 Bristol Myers Squibb
               </a>{" "}
               this summer.
@@ -186,7 +225,7 @@ export default function About() {
             <motion.h4
               ref={eduRef}
               {...motionProps(eduInView)}
-              className="text-accent mb-6 text-[10px] font-bold tracking-[0.2em] uppercase lg:mb-8 lg:text-[11px]"
+              className="text-content lg:text-md mb-6 text-lg font-bold lg:mb-8"
             >
               Education
             </motion.h4>
@@ -196,27 +235,92 @@ export default function About() {
           </div>
 
           {/* Languages + Tools */}
-          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2 lg:pt-8">
+          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2 lg:grid-cols-2">
             <motion.div ref={langRef} {...motionProps(langInView)}>
-              <h4 className="text-muted/60 mb-4 text-[10px] font-bold tracking-[0.2em] uppercase lg:text-[11px]">
-                Languages
+              <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
+                Programming Languages
               </h4>
-              <div className="flex flex-wrap gap-1.5 lg:gap-2">
-                {programmingLanguages.map((lang) => (
-                  <TechBadge key={lang} techString={lang} />
+              <motion.div
+                variants={shouldReduceMotion ? {} : stagger}
+                initial="hidden"
+                animate={langInView ? "visible" : "hidden"}
+                className="flex flex-wrap gap-1.5 lg:gap-2"
+              >
+                {techSkills.programmingLanguages.map((lang) => (
+                  <motion.span
+                    key={lang}
+                    variants={shouldReduceMotion ? {} : fadeUp}
+                  >
+                    <TechTile techString={lang} />
+                  </motion.span>
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
 
             <motion.div ref={toolsRef} {...motionProps(toolsInView)}>
-              <h4 className="text-muted/60 mb-4 text-[10px] font-bold tracking-[0.2em] uppercase lg:text-[11px]">
+              <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
+                AI & Agentic Tools
+              </h4>
+              <motion.div
+                variants={shouldReduceMotion ? {} : stagger}
+                initial="hidden"
+                animate={toolsInView ? "visible" : "hidden"}
+                className="flex flex-wrap gap-1.5 lg:gap-2"
+              >
+                {techSkills.aiAgentic.map((tool) => (
+                  <motion.span
+                    key={tool}
+                    variants={shouldReduceMotion ? {} : fadeUp}
+                  >
+                    <TechTile techString={tool} />
+                  </motion.span>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Cloud & DevOps + Tools & Frameworks */}
+          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2">
+            <motion.div ref={cloudRef} {...motionProps(cloudInView)}>
+              <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
+                Cloud & DevOps
+              </h4>
+              <motion.div
+                variants={shouldReduceMotion ? {} : stagger}
+                initial="hidden"
+                animate={cloudInView ? "visible" : "hidden"}
+                className="flex flex-wrap gap-1.5 lg:gap-2"
+              >
+                {techSkills.cloudDevOps.map((lang) => (
+                  <motion.span
+                    key={lang}
+                    variants={shouldReduceMotion ? {} : fadeUp}
+                  >
+                    <TechTile techString={lang} />
+                  </motion.span>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            <motion.div ref={frameworksRef} {...motionProps(frameworksInView)}>
+              <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
                 Tools & Frameworks
               </h4>
-              <div className="flex flex-wrap gap-1.5 lg:gap-2">
-                {toolsFrameworks.map((tool) => (
-                  <TechBadge key={tool} techString={tool} />
+              <motion.div
+                variants={shouldReduceMotion ? {} : stagger}
+                initial="hidden"
+                animate={frameworksInView ? "visible" : "hidden"}
+                className="flex flex-wrap gap-1.5 lg:gap-2"
+              >
+                {techSkills.tools.map((tool) => (
+                  <motion.span
+                    key={tool}
+                    variants={shouldReduceMotion ? {} : fadeUp}
+                  >
+                    <TechTile techString={tool} />
+                  </motion.span>
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>

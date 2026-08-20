@@ -1,22 +1,69 @@
-import { epiqsolutionsJpeg, evbuddyJpeg, bmsJpeg, drexelJpeg, upfPng, hhsPng } from "../assets";
+import {
+  epiqsolutionsJpeg,
+  evbuddyJpeg,
+  bmsJpeg,
+  drexelJpeg,
+  upfPng,
+  hhsPng,
+} from "../assets";
 
+const skills = {
+  programmingLanguages: [
+    "Python",
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "JavaScript",
+    "TypeScript",
+    "R",
+    "Dart",
+    "Rust",
+    "Swift",
+  ],
+  aiAgentic: [
+    "Claude Code",
+    "Markdown",
+    "MCP",
+    "PyTorch",
+    "Jupyter",
+    "OpenAI API",
+  ],
+  cloudDevOps: [
+    "AWS",
+    "Cloudflare Workers",
+    "Docker",
+    "Databricks",
+    "GitHub Actions",
+  ],
+  tools: [
+    "VS Code",
+    "IntelliJ",
+    "PyCharm",
+    "Git",
+    "Node.js",
+    "Expo",
+    "Jira",
+    "Flutter",
+    "SwiftUI",
+    "Dockerfile",
+    "Makefile",
+  ],
+};
 const workExperience = [
   {
     title: "Cloud Developer Co-op",
     org: "Bristol Myers Squibb",
-    dates: "Upcoming",
+    dates: "Apr 2026 - Sep 2026",
     location: "Princeton, NJ",
     image: bmsJpeg,
     content: [
-      "Transform 100+ BMS training materials into clearer, interactive content using Claude Code via custom MCP servers.", 
-      "Streamline AWS Fargate and ALB deployments across 75+ Cloud team projects with agentic workflows and GitHub Actions, cutting development time by 4 months. ",
-      "Build improved notification pipelines with Amazon SQS and SES to alert employees of critical CloudWatch events across 500+ AWS accounts on the BMS Multiverse Platform.",
-      "Author whitepaper on implementing AWS MCP and AgentCore within BMS, outlining adoption strategies for more efficient agentic workflow orchestration"
-
+      "Simplified infrastructure provisioning across 75+ Cloud team projects by building a full stack, agentic GitHub template repo (Python, CloudFormation, Databricks/JWT authorization), that automates AWS Fargate/ALB deployment, abstracting away AWS complexity so developers could focus solely on code, cutting deployment time by 4 months.",
+      "Reduced alert noise across 500+ AWS accounts by architecting a Lambda-based classification pipeline that intercepts SQS messages, routing informational alerts to a dashboard and critical alerts to an email digest via SES. ",
+      "Onboarded 100+ new employees by building an AI chatbot powered by MDBase, BMS’s internal MCP knowledge base, that answers user questions and explains cloud operations in real time, replacing static documentation with interactive, context-aware support. ",
+      "Automated project governance across 20+ projects by building a requirements-driven Claude skill that parses spec docs into Jira-ready user stories and epics, with a digest of available tasks, functioning as a virtual project manager.",
     ],
-    links: [
-      { label: "Organization", href: "https://www.bms.com" }
-    ],
+    links: [{ label: "Organization", href: "https://www.bms.com" }],
   },
   {
     title: "Software Development Engineering Co-op",
@@ -30,9 +77,7 @@ const workExperience = [
       "Designed Linux user interfaces (UIs) in Python for test stations using PyQt and Matplotlib modules to streamline production testing procedures",
       "Tested 200+ digital, tuner and reference modules in SDRs for appropriate phase noise and power distribution, hitting quality assurance (QA) targets",
     ],
-    links: [
-      { label: "Organization", href: "https://epiqsolutions.com" }
-    ],
+    links: [{ label: "Organization", href: "https://epiqsolutions.com" }],
   },
   {
     title: "Software Development Intern",
@@ -46,9 +91,7 @@ const workExperience = [
       "Used OpenEVSE Arduino embedded system to build a prototype architecture that interfaced with RS485 and CAN protocols used in EVs",
       "Developed user experience (UX) flow for a social app over 50+ Figma design iterations to electric vehicle (EV) owners",
     ],
-    links: [
-      { label: "Organization", href: "https://evbuddy.net" }
-    ],
+    links: [{ label: "Organization", href: "https://evbuddy.net" }],
   },
 ];
 
@@ -56,13 +99,10 @@ const projects = [
   {
     title: "Janata",
     org: "Chinmaya Mission",
-    dates: "Aug 2025 - Present",
-    content: [
-      "Architect and lead development of cross-platform social media app to foster better community for Chinmaya Mission's 1000+ member youth wing, Chinmaya Yuva Kendra (CHYK)",
-      "Develop front-end components utilizing React Native and Nativewind to implement geolocation and social media feed services, contributing to 45% of Minimum Viable Product (MVP)",
-      "Integrate features such as community forum, location services, and event management to enhance user engagement and foster a sense of community among members",
-      "Implement Agile methodologies to follow an industry standard development practices on a 2 week sprint timelines and execute on 25+ user stories to ensure fast and flexible development",
-    ],
+    dates: "Aug 2025 - Aug 2026",
+    content:
+      "A cross-platform social app (Expo, React Native, Cloudflare Workers) for Chinmaya Mission's youth wing using Claude Code-driven agentic workflows, helping members discover events, volunteer opportunities, and connect through community boards.",
+
     technologies: [
       "Node.js",
       "React",
@@ -72,17 +112,17 @@ const projects = [
       "Hono",
       "Posthog",
     ],
-    additional:
-      "This app is in a private beta! Launches at Chinmaya Mahasamadhi Camp on July 1st, 2026",
+    additional: "This app has officially merged with the Chinmaya Mission app",
     links: [
+      { label: "GitHub", href: "https://github.com/Project-Janata/Janata" },
       { label: "Visit", href: "https://chinmayajanata.org" },
-      { label: "GitHub", href: "https://github.com/Project-Janata/Janata" }
     ],
   },
   {
     title: "Portfolio Website",
     dates: "Apr 2025 - Present",
-    content: "An interactive and user-friendly portfolio website inspired by websites like Linear, GitHub and Vercel. Built with React, Vite and Tailwind CSS, and deployed on Firebase.",
+    content:
+      "An interactive and user-friendly portfolio website inspired by websites like Linear, GitHub and Vercel. Built with React, Vite and Tailwind CSS, and deployed on Firebase.",
     technologies: [
       "JavaScript",
       "React",
@@ -92,20 +132,19 @@ const projects = [
     ],
     links: [
       { label: "GitHub", href: "https://github.com/theabhiramr/theabhiramr" },
-      { label: "Visit", href: "https://theabhiramr.com/" }
+      { label: "Visit", href: "https://theabhiramr.com/" },
     ],
   },
   {
     title: "CrashMath",
     org: "College of Computing & Informatics, Drexel University",
     dates: "Jan 2023 - Jun 2023",
-    content: "A gamified calculus learning platform that leverages intelligent tutoring chatbot to provide personalized problem-solving assistance.",
+    content:
+      "A gamified calculus learning platform that leverages intelligent tutoring chatbot to provide personalized problem-solving assistance.",
     technologies: ["JavaScript", "CSS", "HTML", "Firebase", "OpenAI API"],
     additional:
       "Unfortunately, the backend of this app is no longer functional.",
-    links: [
-      { label: "Visit", href: "https://crashmath-16dc6.web.app/" }
-    ],
+    links: [{ label: "Visit", href: "https://crashmath-16dc6.web.app/" }],
   },
 ];
 
@@ -120,9 +159,13 @@ const education = [
       { label: "Minor", value: "Business Analytics" },
       {
         label: "Honors",
-        value: "Dean's List (2022), Pennoni Honors Program, A.J. Drexel Scholarship",
+        value:
+          "Dean's List (2022), Pennoni Honors Program, A.J. Drexel Scholarship",
       },
-      { label: "Activities", value: "Drexel Society of Artificial Intelligence" },
+      {
+        label: "Activities",
+        value: "Drexel Society of Artificial Intelligence",
+      },
     ],
     links: [{ label: "Organization", href: "https://drexel.edu/cs" }],
   },
@@ -133,7 +176,9 @@ const education = [
     dates: "Jan 2025 - Mar 2025",
     image: upfPng,
     meta: [{ label: "Activities", value: "Erasmus Student Network" }],
-    links: [{ label: "Organization", href: "https://www.upf.edu/web/incoming" }],
+    links: [
+      { label: "Organization", href: "https://www.upf.edu/web/incoming" },
+    ],
   },
   {
     title: "High School Diploma",
@@ -152,4 +197,4 @@ const education = [
   },
 ];
 
-export { workExperience, projects, education };
+export { skills, workExperience, projects, education };

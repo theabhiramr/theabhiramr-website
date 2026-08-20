@@ -5,7 +5,6 @@ import {
   SiTailwindcss,
   SiJavascript,
   SiExpress,
-  SiVercel,
   SiTypescript,
   SiOpenai,
   SiLangchain,
@@ -28,17 +27,22 @@ import {
   SiDocker,
   SiClaude,
   SiDatabricks,
+  SiDart,
+  SiRust,
+  SiSwift,
+  SiVercel,
+  SiJira,
 } from "react-icons/si";
-import { FaNodeJs, FaHtml5 } from "react-icons/fa6";
+import { FaNodeJs, FaHtml5, FaFlutter } from "react-icons/fa6";
 import { TbBrandCSharp, TbBrandVite } from "react-icons/tb";
 import { RiFirebaseFill } from "react-icons/ri";
 import { MdCss } from "react-icons/md";
-import { FaAws, FaJava, FaRProject } from "react-icons/fa";
+import { FaAws, FaJava, FaRProject, FaMarkdown } from "react-icons/fa";
 import { VscVscode, VscMcp } from "react-icons/vsc";
 
 const iconSize = 12;
 
-const icons = {
+export const icons = {
   React: {
     url: "https://reactjs.org/",
     icon: <SiReact size={iconSize} className="mr-2" />,
@@ -115,7 +119,7 @@ const icons = {
     icon: <SiCloudflare size={iconSize} className="mr-2" />,
     label: "Cloudflare Pages",
   },
- "Cloudflare Workers": {
+  "Cloudflare Workers": {
     url: "https://developers.cloudflare.com/workers/",
     icon: <SiCloudflare size={iconSize} className="mr-2" />,
     label: "Cloudflare Workers",
@@ -246,12 +250,12 @@ const icons = {
     icon: <FaAws size={iconSize} className="mr-2" />,
     label: "AWS",
   },
-   "Claude Code": {
+  "Claude Code": {
     url: "https://claude.ai/code",
     icon: <SiClaude size={iconSize} className="mr-2" />,
     label: "Claude Code",
   },
-    "MCP": {
+  MCP: {
     url: "https://modelcontextprotocol.io/",
     icon: <VscMcp size={iconSize} className="mr-2" />,
     label: "MCP",
@@ -261,10 +265,51 @@ const icons = {
     icon: <SiDatabricks size={iconSize} className="mr-2" />,
     label: "Databricks",
   },
+  Dart: {
+    url: "https://dart.dev/",
+    icon: <SiDart size={iconSize} className="mr-2" />,
+    label: "Dart",
+  },
+  Rust: {
+    url: "https://www.rust-lang.org/",
+    icon: <SiRust size={iconSize} className="mr-2" />,
+    label: "Rust",
+  },
+  Swift: {
+    url: "https://developer.apple.com/swift/",
+    icon: <SiSwift size={iconSize} className="mr-2" />,
+    label: "Swift",
+  },
+  Markdown: {
+    url: "https://www.markdownguide.org/",
+    icon: <FaMarkdown size={iconSize} className="mr-2" />,
+    label: "Markdown",
+  },
+  "GitHub Actions": {
+    url: "https://github.com/features/actions",
+    icon: <SiGithub size={iconSize} className="mr-2" />,
+    label: "GitHub Actions",
+  },
+  Jira: {
+    url: "https://www.atlassian.com/software/jira",
+    icon: <SiJira size={iconSize} className="mr-2" />,
+    label: "Jira",
+  },
+  Flutter: {
+    url: "https://flutter.dev/",
+    icon: <FaFlutter size={iconSize} className="mr-2" />,
+    label: "Flutter",
+  },
+  SwiftUI: {
+    url: "https://developer.apple.com/xcode/swiftui/",
+    icon: <SiSwift size={iconSize} className="mr-2" />,
+    label: "SwiftUI",
+  },
 };
 
-const TechBadge = ({ techString, textSize = "xs" }) => {
-  const baseClass = `font-geist-mono px-3 py-1 bg-surface border border-border hover:text-accent hover:bg-accent/10 hover:border-accent/20 transition-colors duration-300 text-content rounded-full text-${textSize} uppercase inline-flex items-center font-normal`;
+const TechBadge = ({ techString }) => {
+  const baseClass =
+    "font-geist-mono text-accent bg-accent/10 border-accent/20 inline-flex w-fit items-center self-start rounded-full border px-3 py-1 text-[10px] whitespace-nowrap uppercase sm:text-[11px]";
 
   const tech = icons[techString];
   if (tech) {

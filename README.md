@@ -12,6 +12,13 @@ This is my personal portfolio website. I decided to improve on my website to bet
 - Cloudflare
 
 ## Version History
+
+- ### v2.2.0
+  - update work experience bullets
+  - update resume file
+  - update skills
+  - general design improvements
+  - improved design of tech tools to reduce clutter
 - ### v2.1.1
   - added SEO
   - created robots.txt
@@ -40,4 +47,4 @@ This is my personal portfolio website. I decided to improve on my website to bet
   - Added pages for Work Exeprience, Projects and Resume
   - Added carousel and timeline componenents to more stylistically display projects and work experience
 
-DISCLAIMER: This website was partially written using code generated from Github Copilot (including Gemini, Claude and ChatGPT)
+> DISCLAIMER: This website was partially written using code generated from AI tools
