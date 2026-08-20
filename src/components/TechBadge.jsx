@@ -32,6 +32,8 @@ import {
   SiSwift,
   SiVercel,
   SiJira,
+  SiMysql,
+  SiLucid,
 } from "react-icons/si";
 import { FaNodeJs, FaHtml5, FaFlutter } from "react-icons/fa6";
 import { TbBrandCSharp, TbBrandVite } from "react-icons/tb";
@@ -304,6 +306,16 @@ export const icons = {
     url: "https://developer.apple.com/xcode/swiftui/",
     icon: <SiSwift size={iconSize} className="mr-2" />,
     label: "SwiftUI",
+  },
+  SQL: {
+    url: "https://www.mysql.com/",
+    icon: <SiMysql size={iconSize} className="mr-2" />,
+    label: "SQL",
+  },
+  Lucid: {
+    url: "https://lucid.app/",
+    icon: <SiLucid size={iconSize} className="mr-2" />,
+    label: "Lucid",
   },
 };
 

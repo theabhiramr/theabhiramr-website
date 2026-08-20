@@ -265,7 +265,7 @@ export default function About() {
 
             <motion.div ref={toolsRef} {...motionProps(toolsInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
-                AI & Agentic Tools
+                Tools & Frameworks
               </h4>
               <motion.div
                 variants={shouldReduceMotion ? {} : stagger}
@@ -273,7 +273,7 @@ export default function About() {
                 animate={toolsInView ? "visible" : "hidden"}
                 className="flex flex-wrap gap-1.5 lg:gap-2"
               >
-                {techSkills.aiAgentic.map((tool) => (
+                {techSkills.tools.map((tool) => (
                   <motion.span
                     key={tool}
                     variants={shouldReduceMotion ? {} : fadeUp}
@@ -310,7 +310,7 @@ export default function About() {
 
             <motion.div ref={frameworksRef} {...motionProps(frameworksInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
-                Tools & Frameworks
+                AI & Agentic Tools
               </h4>
               <motion.div
                 variants={shouldReduceMotion ? {} : stagger}
@@ -318,7 +318,7 @@ export default function About() {
                 animate={frameworksInView ? "visible" : "hidden"}
                 className="flex flex-wrap gap-1.5 lg:gap-2"
               >
-                {techSkills.tools.map((tool) => (
+                {techSkills.aiAgentic.map((tool) => (
                   <motion.span
                     key={tool}
                     variants={shouldReduceMotion ? {} : fadeUp}
