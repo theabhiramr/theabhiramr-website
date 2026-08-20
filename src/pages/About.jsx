@@ -235,7 +235,7 @@ export default function About() {
             >
               Education
             </motion.h4>
-            <div className="border-border/30 ml-1 border-l pl-4 lg:ml-0 lg:pl-6">
+            <div className="border-border/30 ml-1 border-l pl-3 lg:ml-0 lg:pl-4">
               <Timeline items={education} />
             </div>
           </div>

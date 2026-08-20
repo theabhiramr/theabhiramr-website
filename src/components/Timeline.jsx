@@ -12,16 +12,16 @@ function TimelineItem({ item, isLast }) {
   return (
     <motion.div
       variants={fadeUp}
-      className="group relative pb-12 pl-10 last:pb-4 sm:pl-16"
+      className="group relative pb-12 pl-8 last:pb-4 sm:pl-12"
     >
       {!isLast && (
         <div
-          className="from-border via-border/50 absolute top-[24px] bottom-0 left-[15px] w-[1px] bg-gradient-to-b to-transparent sm:top-[30px] sm:left-[31px]"
+          className="from-border via-border/50 absolute top-[24px] bottom-0 left-[15px] w-[1px] bg-gradient-to-b to-transparent sm:top-[30px] sm:left-[23px]"
           aria-hidden="true"
         />
       )}
 
-      <div className="absolute top-0 left-0 z-10 flex h-10 w-8 items-center justify-center sm:h-12 sm:w-16">
+      <div className="absolute top-0 left-0 z-10 flex h-10 w-8 items-center justify-center sm:h-12 sm:w-12">
         <div className="bg-content ring-background h-2 w-2 rounded-full ring-4 transition-transform group-hover:scale-125" />
       </div>
 

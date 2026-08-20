@@ -13,6 +13,9 @@ export default function Footer() {
             <span className="ml-2 hidden opacity-50 sm:inline">
               All rights reserved.
             </span>
+            <span className="font-geist-mono ml-2 opacity-50">
+              v{__APP_VERSION__}
+            </span>
           </p>
 
           <a
