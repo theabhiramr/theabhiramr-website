@@ -234,8 +234,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* Languages + Tools */}
-          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2 lg:grid-cols-2">
+          {/* Languages + AI Tools + Cloud & DevOps + Frameworks */}
+          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2">
             <motion.div ref={langRef} {...motionProps(langInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
                 Programming Languages
@@ -277,10 +277,7 @@ export default function About() {
                 ))}
               </motion.div>
             </motion.div>
-          </div>
 
-          {/* Cloud & DevOps + Tools & Frameworks */}
-          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2">
             <motion.div ref={cloudRef} {...motionProps(cloudInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
                 Cloud & DevOps
