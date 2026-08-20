@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypewriter";
-import { Timeline, TechBadge, TechTile } from "../components";
+import { Timeline, TechBadge, TechTile, SocialLinks } from "../components";
 import { profilePng } from "../assets";
 import { education } from "../constants/data";
 import { fadeUp, stagger, inViewOptions } from "../utils/animations";
@@ -104,6 +104,12 @@ export default function About() {
               Abhi <br />
               <span className="text-muted"> Ramachandran</span>
             </h1>
+
+            <SocialLinks
+              className="mt-4 flex flex-wrap items-center gap-2"
+              iconSize={16}
+              variant="tile"
+            />
           </motion.div>
 
           <div
@@ -235,7 +241,7 @@ export default function About() {
           </div>
 
           {/* Languages + Tools */}
-          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2">
             <motion.div ref={langRef} {...motionProps(langInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
                 Programming Languages
@@ -280,7 +286,7 @@ export default function About() {
           </div>
 
           {/* Cloud & DevOps + Tools & Frameworks */}
-          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             <motion.div ref={cloudRef} {...motionProps(cloudInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
                 Cloud & DevOps

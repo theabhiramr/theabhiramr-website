@@ -1,6 +1,14 @@
-# [Portfolio Website](https://theabhiramr.com)
+# [Abhi Ramachandran](https://theabhiramr.com)
 
-This is my personal portfolio website. I decided to improve on my website to better understand full stack development. This serves as an interactive version of my resume. I have also added a contact form as another means for people to reach me. Feel free to follow as I learn how to become a better Full Stack Dev!
+[![Live Site](https://img.shields.io/badge/Live-theabhiramr.com-000000?style=flat-square)](https://theabhiramr.com)
+[![Last Commit](https://img.shields.io/github/last-commit/theabhiramr/theabhiramr?style=flat-square)](https://github.com/theabhiramr/theabhiramr/commits/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflarepages&logoColor=white)](https://pages.cloudflare.com/)
+
+This is my personal portfolio website. I decided to improve on my website to better understand full stack development. This serves as an interactive version of my resume. I've also added a contact form for people to reach me. Web development is fun lowkey
 
 ## Tech Stack:
 
@@ -9,42 +17,43 @@ This is my personal portfolio website. I decided to improve on my website to bet
 - TailwindCSS
 - Framer Motion
 - Web3forms
-- Cloudflare
+- Cloudflare Pages
+
+## How to run:
+
+Requires Node `^20.19.0` or `>=22.12.0` (see `.nvmrc`).
+
+1. Clone the repo
+   ```bash
+   git clone https://github.com/theabhiramr/theabhiramr.git/
+   ```
+2. Install dependencies
+   ```bash
+   cd theabhiramr && npm install
+   ```
+3. Run locally
+   ```bash
+   npm run dev
+   ```
 
 ## Version History
 
-- ### v2.2.0
-  - update work experience bullets
-  - update resume file
-  - update skills
-  - general design improvements
-  - improved design of tech tools to reduce clutter
-- ### v2.1.1
-  - added SEO
-  - created robots.txt
-- ### v2.1.0
-  - Refactored Timeline component for improved structure and readability
-  - Implemented layout routing for LandingPage
-  - Enhanced animations across components
-  - Updated 404 not found page
-  - Removed unused fields from contact form
-  - Switched from Firebase to Cloudflare
-  - Updated resume and profile picture
-- ### v2.0.2
-  - Insanely overengineered the contact form to include phone number field
-  - Added another project
-- ### v2.0.1
-  - switch from Formspree to Web3forms
-  - removed website captcha
-  - improved 404 page
-- ### v2.0
-  - Redesigned website to use a Table of Contents layout
-  - Replace Outfit with Geist Sans and changed fonts
-  - Added a system setting for theme toggle
-  - Removed carousels and other unneccessary features
-- ### v1.0
-  - Completely redesigned website using Tailwind and React
-  - Added pages for Work Exeprience, Projects and Resume
-  - Added carousel and timeline componenents to more stylistically display projects and work experience
+See [CHANGELOG.md](./CHANGELOG.md) for the full release history.
+
+## Author
+
+**Abhi Ramachandran**
+
+- Portfolio: [theabhiramr.com](https://theabhiramr.com)
+- GitHub: [@theabhiramr](https://github.com/theabhiramr)
+- LinkedIn: [theabhiramr](https://linkedin.com/in/theabhiramr/)
+
+## Contributions & Issues
+
+This is a personal portfolio, so it isn't really open for feature contributions, but bug reports and suggestions are welcome via [Issues](https://github.com/theabhiramr/theabhiramr/issues). Small fixes (typos, broken links, accessibility issues) are welcome as pull requests.
+
+## License
+
+Licensed under the [MIT License](./LICENSE).
 
 > DISCLAIMER: This website was partially written using code generated from AI tools

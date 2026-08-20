@@ -42,6 +42,7 @@ const skills = {
     "PyCharm",
     "Git",
     "Node.js",
+    "React",
     "Expo",
     "Jira",
     "Flutter",
@@ -164,7 +165,8 @@ const education = [
       },
       {
         label: "Activities",
-        value: "Drexel Society of Artificial Intelligence",
+        value:
+          "Drexel Society of Artificial Intelligence, Drexel Young Democratic Socialists of America",
       },
     ],
     links: [{ label: "Organization", href: "https://drexel.edu/cs" }],
