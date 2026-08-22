@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypewriter";
-import { Timeline, TechBadge, TechTile } from "../components";
+import { Timeline, TechBadge, TechTile, SocialLinks } from "../components";
 import { profilePng } from "../assets";
 import { education } from "../constants/data";
 import { fadeUp, stagger, inViewOptions } from "../utils/animations";
@@ -104,6 +104,12 @@ export default function About() {
               Abhi <br />
               <span className="text-muted"> Ramachandran</span>
             </h1>
+
+            <SocialLinks
+              className="mt-4 flex flex-wrap items-center gap-2"
+              iconSize={16}
+              variant="tile"
+            />
           </motion.div>
 
           <div
@@ -229,13 +235,13 @@ export default function About() {
             >
               Education
             </motion.h4>
-            <div className="border-border/30 ml-1 border-l pl-4 lg:ml-0 lg:pl-6">
+            <div className="border-border/30 ml-1 border-l pl-3 lg:ml-0 lg:pl-4">
               <Timeline items={education} />
             </div>
           </div>
 
-          {/* Languages + AI Tools + Cloud & DevOps + Frameworks */}
-          <div className="grid grid-cols-1 gap-10 pt-4 sm:grid-cols-2">
+          {/* Languages + Tools & Frameworks + Cloud & DevOps + AI & Agentic Tools */}
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
             <motion.div ref={langRef} {...motionProps(langInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
                 Programming Languages
@@ -259,7 +265,7 @@ export default function About() {
 
             <motion.div ref={toolsRef} {...motionProps(toolsInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
-                AI & Agentic Tools
+                Tools & Frameworks
               </h4>
               <motion.div
                 variants={shouldReduceMotion ? {} : stagger}
@@ -267,7 +273,7 @@ export default function About() {
                 animate={toolsInView ? "visible" : "hidden"}
                 className="flex flex-wrap gap-1.5 lg:gap-2"
               >
-                {techSkills.aiAgentic.map((tool) => (
+                {techSkills.tools.map((tool) => (
                   <motion.span
                     key={tool}
                     variants={shouldReduceMotion ? {} : fadeUp}
@@ -301,7 +307,7 @@ export default function About() {
 
             <motion.div ref={frameworksRef} {...motionProps(frameworksInView)}>
               <h4 className="text-content/60 lg:text-md mb-4 text-lg font-bold">
-                Tools & Frameworks
+                AI & Agentic Tools
               </h4>
               <motion.div
                 variants={shouldReduceMotion ? {} : stagger}
@@ -309,7 +315,7 @@ export default function About() {
                 animate={frameworksInView ? "visible" : "hidden"}
                 className="flex flex-wrap gap-1.5 lg:gap-2"
               >
-                {techSkills.tools.map((tool) => (
+                {techSkills.aiAgentic.map((tool) => (
                   <motion.span
                     key={tool}
                     variants={shouldReduceMotion ? {} : fadeUp}
