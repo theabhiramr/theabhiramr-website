@@ -4,8 +4,8 @@ import { FaArrowRotateRight } from "react-icons/fa6";
 
 const errorHtml = `
 <span class="text-[#f48771]" style="font-weight: 600;">Website received signal SIGABRT, Aborted (core dumped)</span><br/>
-<span class="text-[#cccccc]">This isn't a missing page — the app crashed while rendering.<br/>
-That's a client-side bug, not the site being down. A reload starts it fresh.<br/> <br/>
+<span class="text-[#cccccc]">Shoot! The app must have crashed while rendering.<br/>
+The good news is that I am probably working hard on my website right now and it will be up shortly.<br/> <br/>
 ERRNO 500 Uncaught exception</span>
 `;
 
