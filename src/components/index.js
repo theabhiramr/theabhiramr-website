@@ -7,6 +7,7 @@ import TechBadge from "./TechBadge";
 import TechTile from "./TechTile";
 import HamburgerMenu from "./HamburgerMenu";
 import Sidebar from "./Sidebar";
+import ErrorBoundary from "./ErrorBoundary";
 
 export {
   Navbar,
@@ -17,4 +18,5 @@ export {
   TechTile,
   HamburgerMenu,
   Sidebar,
+  ErrorBoundary,
 };
