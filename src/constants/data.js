@@ -45,7 +45,15 @@ const skills = {
     "Databricks",
     "GitHub Actions",
   ],
-  aiAgentic: ["Claude Code", "Markdown", "MCP", "PyTorch", "OpenAI API"],
+  aiAgentic: [
+    "Claude Code",
+    "Markdown",
+    "MCP",
+    "PyTorch",
+    "OpenAI API",
+    "LangChain",
+    "TensorFlow",
+  ],
 };
 const workExperience = [
   {

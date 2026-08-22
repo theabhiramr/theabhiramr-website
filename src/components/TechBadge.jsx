@@ -34,6 +34,7 @@ import {
   SiJira,
   SiMysql,
   SiLucid,
+  SiTensorflow,
 } from "react-icons/si";
 import { FaNodeJs, FaHtml5, FaFlutter } from "react-icons/fa6";
 import { TbBrandCSharp, TbBrandVite } from "react-icons/tb";
@@ -316,6 +317,11 @@ export const icons = {
     url: "https://lucid.app/",
     icon: <SiLucid size={iconSize} className="mr-2" />,
     label: "Lucid",
+  },
+  TensorFlow: {
+    url: "https://www.tensorflow.org/",
+    icon: <SiTensorflow size={iconSize} className="mr-2" />,
+    label: "TensorFlow",
   },
 };
 
