@@ -1,6 +1,12 @@
 # Changelog
 
-All notable changes to this project are documented in this file.
+All changes to this project are documented in this file.
+
+## v2.2.2
+
+- added crash error message (you will hopefully never see this)
+- added more tools & tech
+- added location pin under my name
 
 ## v2.2.1
 

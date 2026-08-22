@@ -6,6 +6,7 @@ import { profilePng } from "../assets";
 import { education } from "../constants/data";
 import { fadeUp, stagger, inViewOptions } from "../utils/animations";
 import { skills as techSkills } from "../constants/data";
+import { IoMdPin } from "react-icons/io";
 
 const skills = [
   "Full Stack Development",
@@ -105,8 +106,26 @@ export default function About() {
               <span className="text-muted"> Ramachandran</span>
             </h1>
 
+            <div className="mt-2 flex items-end space-x-1 text-sm">
+              <a
+                href="https://maps.google.com/?q=Philadelphia,+PA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent text-muted flex items-center gap-1 transition-colors duration-300"
+              >
+                <IoMdPin size={16} />
+                <span className="text-sm leading-none">Philadelphia, PA</span>
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={shouldReduceMotion ? {} : fadeUp}
+            initial="hidden"
+            animate="visible"
+          >
             <SocialLinks
-              className="mt-4 flex flex-wrap items-center gap-2"
+              className="flex flex-wrap items-center gap-2"
               iconSize={16}
               variant="tile"
             />
