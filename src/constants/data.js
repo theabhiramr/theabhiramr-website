@@ -136,7 +136,10 @@ const projects = [
       "Cloudflare Pages",
     ],
     links: [
-      { label: "GitHub", href: "https://github.com/theabhiramr/theabhiramr" },
+      {
+        label: "GitHub",
+        href: "https://github.com/theabhiramr/theabhiramr-website",
+      },
       { label: "Visit", href: "https://theabhiramr.com/" },
     ],
   },

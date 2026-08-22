@@ -1,7 +1,7 @@
 # [Abhi Ramachandran](https://theabhiramr.com)
 
 [![Live Site](https://img.shields.io/badge/Live-theabhiramr.com-000000?style=flat-square)](https://theabhiramr.com)
-[![Last Commit](https://img.shields.io/github/last-commit/theabhiramr/theabhiramr?style=flat-square)](https://github.com/theabhiramr/theabhiramr/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/theabhiramr/theabhiramr-website?style=flat-square)](https://github.com/theabhiramr/theabhiramr-website/commits/main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
@@ -25,11 +25,11 @@ Requires Node `^20.19.0` or `>=22.12.0` (see `.nvmrc`).
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/theabhiramr/theabhiramr.git/
+   git clone https://github.com/theabhiramr/theabhiramr-website.git/
    ```
 2. Install dependencies
    ```bash
-   cd theabhiramr && npm install
+   cd theabhiramr-website && npm install
    ```
 3. Run locally
    ```bash
@@ -50,7 +50,7 @@ See [CHANGELOG.md](./CHANGELOG.md) for the full release history.
 
 ## Contributions & Issues
 
-This is a personal portfolio, so it isn't really open for feature contributions, but bug reports and suggestions are welcome via [Issues](https://github.com/theabhiramr/theabhiramr/issues). Small fixes (typos, broken links, accessibility issues) are welcome as pull requests.
+This is a personal portfolio, so it isn't really open for feature contributions, but bug reports and suggestions are welcome via [Issues](https://github.com/theabhiramr/theabhiramr-website/issues). Small fixes (typos, broken links, accessibility issues) are welcome as pull requests.
 
 ## License
 
