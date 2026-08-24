@@ -140,7 +140,7 @@ const projects = [
         label: "GitHub",
         href: "https://github.com/theabhiramr/theabhiramr-website",
       },
-      { label: "Visit", href: "https://theabhiramr.com/" },
+      { label: "Visit", href: "https://theabhiramr.dev/" },
     ],
   },
   {

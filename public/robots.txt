@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-Sitemap: https://theabhiramr.com/sitemap.xml
+Sitemap: https://theabhiramr.dev/sitemap.xml

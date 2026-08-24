@@ -1,6 +1,6 @@
-# [Abhi Ramachandran](https://theabhiramr.com)
+# [Abhi Ramachandran](https://theabhiramr.dev)
 
-[![Live Site](https://img.shields.io/badge/Live-theabhiramr.com-000000?style=flat-square)](https://theabhiramr.com)
+[![Live Site](https://img.shields.io/badge/Live-theabhiramr.dev-000000?style=flat-square)](https://theabhiramr.dev)
 [![Last Commit](https://img.shields.io/github/last-commit/theabhiramr/theabhiramr-website?style=flat-square)](https://github.com/theabhiramr/theabhiramr-website/commits/main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -44,7 +44,7 @@ See [CHANGELOG.md](./CHANGELOG.md) for the full release history.
 
 **Abhi Ramachandran**
 
-- Portfolio: [theabhiramr.com](https://theabhiramr.com)
+- Portfolio: [theabhiramr.dev](https://theabhiramr.dev)
 - GitHub: [@theabhiramr](https://github.com/theabhiramr)
 - LinkedIn: [theabhiramr](https://linkedin.com/in/theabhiramr/)
 
